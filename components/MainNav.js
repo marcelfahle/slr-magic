@@ -1,6 +1,7 @@
 import styled from "emotion/react";
 import FontAwesome from "react-fontawesome";
 import NavItem from "./NavItem";
+import SocialNav from "./SocialNav";
 
 const NavTrigger = styled.label`
   position: absolute;
@@ -24,6 +25,10 @@ const NavTrigger = styled.label`
   & + input:checked ~ nav {
     max-height: 500px;
   }
+
+  @media (min-width: 800px) {
+    display: none;
+  }
 `;
 
 const Nav = styled.nav`
@@ -33,15 +38,18 @@ const Nav = styled.nav`
   padding-top: 1rem;
 
   @media (min-width: 800px) {
+    max-height: none;
     display: inline-block;
     position: absolute;
     left: auto;
+    top: 0;
+    padding: 0;
     transform: 0;
     right: 20px;
   }
   @media (min-width: 960px) {
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
   }
 `;
 const NavItems = styled.ul`
@@ -67,6 +75,7 @@ const MainNav = () =>
         <NavItem to="/contacts" label="Contacts" />
       </NavItems>
     </Nav>
+    <SocialNav />
   </div>;
 
 export default MainNav;

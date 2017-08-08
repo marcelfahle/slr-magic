@@ -19,17 +19,18 @@ const Item = styled.li`
     color: black;
     font-size: 0.812rem;
     line-height: 2.4rem;
-    @media (min-width: 800px) {
-      line-height: 1rem;
-    }
   }
 
   @media (min-width: 800px) {
-    display: inline;
+    display: inline-block;
     padding-right: 20px;
-    border: none;
+    border-top: none;
+    & a {
+      line-height: 1em;
+    }
     &:last-child {
       padding-right: 0;
+      border-bottom: none;
     }
   }
 `;
