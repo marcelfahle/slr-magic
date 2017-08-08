@@ -1,0 +1,23 @@
+{
+  "name": "slr-magic",
+  "version": "0.0.1",
+  "description": "Website for SLR Magic",
+  "main": "index.js",
+  "repository": "https://github.com/marcelfahle/slrmagic",
+  "author": "Marcel & Monika Fahle",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "emotion": "^7.0.11",
+    "glamor": "^2.20.39",
+    "next": "beta",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-fontawesome": "^1.6.1"
+  }
+}
