@@ -33,7 +33,8 @@ const NavTrigger = styled.label`
 
 const Nav = styled.nav`
   max-height: 0;
-  transition: max-height 0.8s linear;
+  transition: max-height 500ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  transition-timing-function: cubic-bezier(0.000, 0.000, 0.580, 1.000);
   overflow: hidden;
   padding-top: 1rem;
 
@@ -74,8 +75,8 @@ const MainNav = () =>
         <NavItem to="/faq" label="FAQ" />
         <NavItem to="/contacts" label="Contacts" />
       </NavItems>
+      <SocialNav />
     </Nav>
-    <SocialNav />
   </div>;
 
 export default MainNav;

@@ -10,9 +10,6 @@ const Item = styled.li`
   padding: 0;
   padding-left: 20px;
   border-top: 1px solid #f2f2f2;
-  &:last-child {
-    border-bottom: 1px solid #f2f2f2;
-  }
   & a {
     text-decoration: none;
     text-transform: uppercase;
@@ -30,7 +27,6 @@ const Item = styled.li`
     }
     &:last-child {
       padding-right: 0;
-      border-bottom: none;
     }
   }
 `;
