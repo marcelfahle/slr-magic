@@ -7,6 +7,8 @@ import MainNav from "./MainNav";
 import Footer from "./Footer";
 import "./globalStyles";
 
+const SiteWrapper = styled.div``;
+
 const Layout = ({ children, title = "SLR Magic" }) =>
   <div>
     <Head>
@@ -16,7 +18,7 @@ const Layout = ({ children, title = "SLR Magic" }) =>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700"
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700"
         rel="stylesheet"
       />
       <link
@@ -24,12 +26,14 @@ const Layout = ({ children, title = "SLR Magic" }) =>
         rel="stylesheet"
       />
     </Head>
-    <header>
+    <header id="header">
       <HomeLink />
       <MainNav />
     </header>
 
-    {children}
+    <main id="main">
+      {children}
+    </main>
 
     <Footer />
   </div>;
