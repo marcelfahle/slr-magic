@@ -13,7 +13,6 @@ const Item = styled.li`
   & a {
     text-decoration: none;
     text-transform: uppercase;
-    color: black;
     font-size: 0.812rem;
     line-height: 2.4rem;
   }
@@ -24,6 +23,9 @@ const Item = styled.li`
     border-top: none;
     & a {
       line-height: 1em;
+    }
+    &:first-child {
+      padding-left: 0;
     }
     &:last-child {
       padding-right: 0;

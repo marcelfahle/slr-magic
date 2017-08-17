@@ -4,14 +4,22 @@ import styled from "emotion/react";
 const A = styled.a`
   display: inline-block;
   margin-top: 26px;
+  margin-bottom: 26px;
   padding-left: 20px;
 `;
 const Logo = styled.img`width: 190px;`;
 
-const HomeLink = () =>
+const HomeLink = ({ theme, mobileMenu }) =>
   <Link href="/">
     <A>
-      <Logo src="/static/slrmagic-logo.png" alt="Back to Home" />
+      <Logo
+        src={`/static/slrmagic-logo${theme &&
+        !mobileMenu &&
+        theme === "transparent"
+          ? "-allwhite"
+          : ""}.png`}
+        alt="Back to Home"
+      />
     </A>
   </Link>;
 

@@ -14,6 +14,11 @@ const NavTrigger = styled.label`
     display: inline-block;
     width: 2rem;
     height: 2rem;
+    color: ${props =>
+      props.theme === "dark" ||
+      (props.theme === "transparent" && !props.mobileMenu)
+        ? "white"
+        : "black"};
   }
 
   & span.fa.close-menu {
@@ -33,11 +38,11 @@ const NavTrigger = styled.label`
 
 const Nav = styled.nav`
   max-height: 0;
-  transition: max-height 500ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  transition: max-height 300ms cubic-bezier(0.000, 0.000, 0.580, 1.000);
   transition-timing-function: cubic-bezier(0.000, 0.000, 0.580, 1.000);
   overflow: hidden;
   padding-top: 1rem;
-
+  background: ${props => (props.theme ? props.theme : "transparent")};
   @media (min-width: 800px) {
     max-height: none;
     display: inline-block;
@@ -46,7 +51,9 @@ const Nav = styled.nav`
     top: 0;
     padding: 0;
     transform: 0;
-    right: 20px;
+    height: 80px;
+    width: 100%;
+    text-align: right;
   }
   @media (min-width: 960px) {
     width: 100%;
@@ -56,26 +63,43 @@ const Nav = styled.nav`
 const NavItems = styled.ul`
   padding-left: 0;
   margin: 0;
+  & li a {
+    color: black;
+  }
   @media (min-width: 800px) {
+    margin: 34px 26px 0 0;
+    & li a {
+      color: ${props =>
+        props.theme === "dark" || props.theme === "transparent"
+          ? "white"
+          : "black"};
+    }
+  }
+  @media (min-width: 960px) {
     margin: 34px 0 0 0;
   }
 `;
 
-const MainNav = () =>
+const MainNav = ({ theme, mobileMenu, toggleMobileMenu }) =>
   <div>
-    <NavTrigger htmlFor="nav-trigger">
+    <NavTrigger theme={theme} mobileMenu={mobileMenu} htmlFor="nav-trigger">
       <FontAwesome name="bars" size="2x" />
     </NavTrigger>
-    <input type="checkbox" id="nav-trigger" />
-    <Nav role="navigation">
-      <NavItems>
+    <input
+      type="checkbox"
+      id="nav-trigger"
+      checked={mobileMenu}
+      onChange={toggleMobileMenu}
+    />
+    <Nav role="navigation" theme={theme}>
+      <NavItems theme={theme}>
         <NavItem to="/" label="Home" />
         <NavItem to="/products" label="Products" />
         <NavItem to="/distributors" label="Distributors" />
         <NavItem to="/faq" label="FAQ" />
         <NavItem to="/contacts" label="Contacts" />
       </NavItems>
-      <SocialNav />
+      <SocialNav theme={theme} />
     </Nav>
   </div>;
 

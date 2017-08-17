@@ -30,8 +30,12 @@ const Nav = styled.ul`
       padding-left: 0;
       border-bottom: none;
       border-top: none;
+      &:last-child {
+        border-bottom: none;
+      }
     }
     & li a {
+      color: ${props => (props.theme === "transparent" ? "white" : "black")};
       padding-left: 20px;
       padding-right: 20px;
       line-height: 1em;
@@ -45,8 +49,8 @@ const Nav = styled.ul`
   }
 `;
 
-const SocialNav = () =>
-  <Nav>
+const SocialNav = ({ theme }) =>
+  <Nav theme={theme}>
     <li>
       <a href="https://twitter.com" target="_blank">
         <FontAwesome name="twitter" />
