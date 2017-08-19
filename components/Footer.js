@@ -122,7 +122,7 @@ const Input = styled.input`
   }
 `;
 const Button = styled.button`
-  bordeR: 0;
+  border: 0;
   font-size: 1rem;
   line-height: 64px;
   width: 64px;
