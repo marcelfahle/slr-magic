@@ -1,0 +1,18 @@
+[
+  {
+    "q": "When will lenses for other mounts be released?",
+    "a": "While other mounts are under consideration, currently we are only developing products for Micro Four Thirds and E-mount. You can follow us on twitter for future product announcements."
+  },
+  {
+    "q": "Where are SLR Magic lenses manufactured?",
+    "a" : "The HyperPrime lenses are manufactured in China and Japan. Lenses are calibrated and assembled in Hong Kong."
+  },
+  {
+    "q": "Does the lens support automatic focusing?",
+    "a": "No, the lens is a fully manual design."
+  },
+  {
+    "q": "Does the lens cover the whole image sensor, and is there any vignetting?",
+    "a": "Yes, the lens covers the entire image sensor, and does not produce any vignetting."
+  }
+]

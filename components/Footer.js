@@ -149,19 +149,29 @@ const Footer = () =>
       <Col className="nav">
         <Nav>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
           </li>
           <li>
-            <Link href="/products">Products</Link>
+            <Link href="/products">
+              <a>Products</a>
+            </Link>
           </li>
           <li>
-            <Link href="/distributors">Distributors</Link>
+            <Link href="/distributors">
+              <a>Distributors</a>
+            </Link>
           </li>
           <li>
-            <Link href="/link">FAQ</Link>
+            <Link href="/link">
+              <a>FAQ</a>
+            </Link>
           </li>
           <li>
-            <Link href="/contacts">Contacts</Link>
+            <Link href="/contacts">
+              <a>Contacts</a>
+            </Link>
           </li>
         </Nav>
       </Col>

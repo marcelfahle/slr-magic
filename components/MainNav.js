@@ -5,6 +5,7 @@ import SocialNav from "./SocialNav";
 
 const NavTrigger = styled.label`
   position: absolute;
+  z-index: 1000;
   width: 2rem;
   height: 2rem;
   top: 1.6rem;
