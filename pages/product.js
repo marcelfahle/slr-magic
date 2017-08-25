@@ -55,15 +55,27 @@ const ProductWrapper = styled.div`
   }
 `;
 
-const FAQWrapper = styled.div`margin: 40px 0;`;
+const FAQWrapper = styled.div`
+  padding: 40px 0;
+  @media (min-width: 480px) {
+    padding: 60px 0;
+  }
+  @media (min-width: 960px) {
+    padding: 80px 0;
+  }
+`;
 const RelatedProductsWrapper = styled.div`
   display: none;
-  @media (min-width: 480px) {
+  background: #f7f7f7;
+  @media (min-width: 640px) {
     display: block;
-    margin: 20px 0;
+    padding: 60px 0;
   }
   @media (min-width: 640px) {
-    margin: 40px 0;
+    padding: 60px 0;
+  }
+  @media (min-width: 960px) {
+    padding: 80px 0;
   }
 `;
 const RelatedProducts = styled.div`display: flex;`;

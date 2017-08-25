@@ -42,8 +42,8 @@ const H5 = styled.h5`
   font-family: Lora, serif;
   font-size: 0.75rem;
   line-height: 2em;
-  font-weight: bold;
-  color: #3e3e3e;
+  font-weight: 400;
+  color: #3d3d3d;
   @media (min-width: 960px) {
     font-size: 1.1rem;
   }

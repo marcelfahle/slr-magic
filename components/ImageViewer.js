@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactSwipe from "react-swipe";
 import styled from "emotion/react";
 
 const Images = styled.div`
@@ -18,16 +19,11 @@ const Single = styled.div`
   }
 `;
 
-const FullSizeScrollWrapper = styled.div`overflow-x: scroll;`;
-const FullSize = styled.div`
+const FullSizeScrollWrapper = styled.div`
   display: block;
 
   @media (min-width: 640px) {
     display: none;
-  }
-  & img {
-    width: 90vw;
-    display: inline;
   }
 `;
 
@@ -47,7 +43,7 @@ const Thumb = styled.img`
   width: 40px;
   margin-right: 10px;
   cursor: pointer;
-  @meda (min-width: 960px) {
+  @media (min-width: 960px) {
     width: 70px;
   }
 `;
@@ -75,7 +71,7 @@ class ImageViewer extends Component {
     return (
       <Images>
         <FullSizeScrollWrapper>
-          <FullSize style={{ width: `${images.length * 90}vw` }}>
+          <ReactSwipe className="carousel" swipeOptions={{ continuous: false }}>
             {images.map((img, idx) =>
               <img
                 key={idx}
@@ -83,7 +79,7 @@ class ImageViewer extends Component {
                 alt={`${title} ${idx + 1}`}
               />
             )}
-          </FullSize>
+          </ReactSwipe>
         </FullSizeScrollWrapper>
         <Single>
           <img src={`/static/${images[this.state.currentImage]}`} alt="img" />

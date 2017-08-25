@@ -20,6 +20,7 @@
     "react-dom": "^15.6.1",
     "react-fontawesome": "^1.6.1",
     "react-stripe-checkout": "^2.6.3",
-    "swiper": "^3.4.2"
+    "react-swipe": "^5.0.8",
+    "swipe-js-iso": "^2.0.3"
   }
 }

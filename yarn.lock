@@ -2778,7 +2778,7 @@ prop-types-exact@^1.1.1:
     has "^1.0.1"
     object.assign "^4.0.4"
 
-prop-types@15.5.10, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6:
+prop-types@15.5.10, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.7:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -2888,6 +2888,14 @@ react-proxy@^3.0.0-alpha.0:
 react-stripe-checkout@^2.6.3:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/react-stripe-checkout/-/react-stripe-checkout-2.6.3.tgz#3173a870b04e5a3c321a06d24cd53c6030111c45"
+
+react-swipe@^5.0.8:
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/react-swipe/-/react-swipe-5.0.8.tgz#95cae31f2d74e1b4886f01ffcb72837b375b66eb"
+  dependencies:
+    object-assign "^4.1.0"
+    prop-types "^15.5.7"
+    swipe-js-iso "^2.0.3"
 
 react@^15.6.1:
   version "15.6.1"
@@ -3328,9 +3336,9 @@ supports-color@^4.0.0, supports-color@^4.2.0:
   dependencies:
     has-flag "^2.0.0"
 
-swiper@^3.4.2:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-3.4.2.tgz#39d6b410b1a39833e1f72d3b72999df5f5e38392"
+swipe-js-iso@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/swipe-js-iso/-/swipe-js-iso-2.0.3.tgz#76892ca4fc2928f384ac042739a25f7afe6fcf74"
 
 tapable@^0.2.7, tapable@~0.2.5:
   version "0.2.8"
